@@ -3,7 +3,7 @@ import "./globals.css";
 import { AppProvider } from "./context.js/appContext";
 import Content from "./components/content";
 import Script from "next/script";
-
+ 
 
 const inter = Inter({ subsets: ["latin"] });
 
