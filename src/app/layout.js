@@ -20,14 +20,14 @@ export default function RootLayout({ children }) {
         <AppProvider>
           <Content>{children}</Content>
         </AppProvider>
-<Script
-  id="originally-black-widget"
-  src="http://localhost:3000/api/blackcard/widget/v1.js?v=2"
-  data-blackcard-key="bcw_live_qGPoFyLQ8qwc6d2EDE51zUsfH2oGi2weEkA1T6HbCKA"
-  data-label="Open BlackCard"
-  data-position="left"
-  strategy="afterInteractive"
-/>
+// <Script
+//   id="originally-black-widget"
+//   src="http://localhost:3000/api/blackcard/widget/v1.js?v=2"
+//   data-blackcard-key="bcw_live_qGPoFyLQ8qwc6d2EDE51zUsfH2oGi2weEkA1T6HbCKA"
+//   data-label="Open BlackCard"
+//   data-position="left"
+//   strategy="afterInteractive"
+// />
  </body>
     </html>
   );
