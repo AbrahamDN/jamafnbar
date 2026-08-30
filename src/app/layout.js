@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
+import Script from "next/script";
+
 import "./globals.css";
 import { AppProvider } from "./context.js/appContext";
 import Content from "./components/content";
-import Script from "next/script";
- 
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +16,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-  <body className={`${inter.className} overflow-x-hidden`}>
-
-      <AppProvider>
+      <body className={`${inter.className} overflow-x-hidden`}>
+        <AppProvider>
           <Content>{children}</Content>
         </AppProvider>
-  <script src="http://localhost:3000/api/blackcard/widget/v1.js" data-blackcard-key="bcw_live_JbrdBdBgAu9z8fBtPA7ZH5WB7ZAa6Dq4jdLfu4PTAjg" data-label="Open BlackCard" data-position="right" defer></script>
-        </body>
+<Script
+  id="originally-black-widget"
+  src="http://localhost:3000/api/blackcard/widget/v1.js?v=2"
+  data-blackcard-key="bcw_live_qGPoFyLQ8qwc6d2EDE51zUsfH2oGi2weEkA1T6HbCKA"
+  data-label="Open BlackCard"
+  data-position="left"
+  strategy="afterInteractive"
+/>
+ </body>
     </html>
   );
 }
